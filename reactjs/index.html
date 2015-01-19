@@ -17,7 +17,7 @@
       <li><a href="https://facebook.github.io/react">React Home Page</a></li>
       <li><a href="https://www.youtube.com/watch?v=nYkdrAPrdcw&list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v#t=1345">
         React announcement </a><br/>
-        (with a good description of the motivation)
+        (with a good description of the motivation and benefits)
       </li>
       <li><a href="https://github.com/graysonwright/talks/tree/master/reactjs">
         This talk's slides on github
@@ -40,19 +40,21 @@
       </li>
       <li>
         <div class="headline">All the power of javascript in your views.</div>
-        you don't need to rely on templating helpers
-        like <code>{{#each}}</code> or <code>{{&gt; }}</code>.
+        you don't need to rely on clunky templating helpers
+        like <code>{{#each}}</code> or <code>{{&gt;}}</code>.
       </li>
       <li>
         <div class="headline">Re-render the entire app on every change.</div>
-        We don't need to declare dependencies for our components' properties.
+        We don't need to declare dependencies for our components' properties
+        &mdash; React treats all of our code as a black box.
       </li>
       <li>
         <div class="headline">Speed, you say? Virtual DOM, I reply!</div>
         React generates a virtual DOM tree on updates,
         diffs it with the existing tree,
-        and performs a minimal set of changes.
-        (See the React announcement above)
+        and performs a minimal set of changes.<br/>
+        This is often faster than manual DOM manipulation.
+        (See the announcement video above)
       </li>
     </ul>
   </body>

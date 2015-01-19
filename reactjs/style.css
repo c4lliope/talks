@@ -7,6 +7,7 @@ body {
 
 h1, h2 {
   font-family: 'bree';
+  margin-top: 2em;
 }
 
 .definitions {
@@ -18,7 +19,7 @@ dt {
 }
 
 ul {
-  width: 20em;
+  width: 30em;
 }
 
 li {
