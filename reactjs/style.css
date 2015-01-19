@@ -7,7 +7,14 @@ body {
 
 h1, h2 {
   font-family: 'bree';
-  margin: 0;
+}
+
+.definitions {
+  margin-top: 4em;
+}
+
+dt {
+  font-weight: bold;
 }
 
 a {
