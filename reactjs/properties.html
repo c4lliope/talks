@@ -11,11 +11,17 @@
   <body>
     <div id="example"></div>
 
-    <a id="index_link" href="/">Talk Index</a>
+    <a href="/">Talk Index</a>
 
     <script type="text/jsx">
+      var Greeting = React.createClass({
+        render: function() {
+          return <h1>Hello, {this.props.name}</h1>
+        }
+      });
+
       React.render(
-        <h1>Hello, World!</h1>,
+        <Greeting name="thoughtbot"/>,
         document.getElementById('example')
       );
     </script>

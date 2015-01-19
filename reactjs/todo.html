@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>React.js demo | Grayson Wright</title>
+    <script src="build/react.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="example"></div>
+
+    <a href="/">Talk Index</a>
+
+    <script type="text/jsx">
+
+var ToDoList = React.createClass({
+  renderItem: function(item) {
+    return <li>{item}</li>;
+  },
+
+  render: function() {
+    return <ul>{this.props.items.map(this.renderItem)}</ul>
+  }
+});
+
+var ToDoApp = React.createClass({
+  getInitialState: function() {
+    return { items: [], inputText: '' };
+  },
+  onChange: function(e) {
+    this.setState({ inputText: e.target.value });
+  },
+  handleSubmit: function(e) {
+    e.preventDefault();
+    this.setState({
+      items: this.state.items.concat([this.state.inputText]),
+      inputText: '',
+    });
+  },
+  render: function() {
+    return(
+    <div>
+      <h3>ToDo</h3>
+      <ToDoList items={this.state.items} />
+      <form onSubmit={this.handleSubmit}>
+        <input onChange={this.onChange} value={this.state.inputText} />
+        <button>{'Add #' + (this.state.items.length + 1)}</button>
+      </form>
+    </div>
+    );
+  }
+});
+
+React.render(
+  <ToDoApp />,
+  document.getElementById('example')
+);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>React.js demo | Grayson Wright</title>
+    <script src="build/react.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="example"></div>
+
+    <a href="/">Talk Index</a>
+
+    <script type="text/jsx">
+
+var Timer = React.createClass({
+  getInitialState: function() {
+    return { secondsElapsed: 0 };
+  },
+  tick: function() {
+    this.setState({ secondsElapsed: this.state.secondsElapsed + 1});
+  },
+  componentDidMount: function() {
+    this.interval = setInterval(this.tick, 1000);
+  },
+  componentWillUnmount: function() {
+    clearInterval(this.interval);
+  },
+  render: function() {
+    return (
+      <h1>Seconds Elapsed: {this.state.secondsElapsed}</h1>
+    );
+  }
+});
+
+React.render(
+  <Timer />,
+  document.getElementById('example')
+);
+    </script>
+  </body>
+</html>
