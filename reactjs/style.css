@@ -10,6 +10,10 @@ h1, h2 {
   margin-top: 2em;
 }
 
+h1:first-child {
+  margin-top: 1em;
+}
+
 .definitions {
   margin-top: 4em;
 }
