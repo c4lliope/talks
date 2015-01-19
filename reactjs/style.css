@@ -17,9 +17,21 @@ dt {
   font-weight: bold;
 }
 
+ul {
+  width: 20em;
+}
+
+li {
+  margin-bottom: .6em;
+}
+
 a {
   text-decoration: none;
   color: #CC7A6F;
+}
+
+.headline {
+  font-weight: bold;
 }
 
 #example {
