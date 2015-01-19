@@ -1,19 +1,27 @@
 body {
   font-family: 'museo sans';
   padding: 4em;
-  background-color: #ddd;
-}
-
-body#index {
-  background-color: #fff;
-}
-
-#example {
-  margin-bottom: 4em;
-  background-color: #fff;
-  padding: 1.6em;
+  background-color: white;
+  color: #484848;
 }
 
 h1, h2 {
   font-family: 'bree';
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #CC7A6F;
+}
+
+#example {
+  border: 1px solid #484848;
+  padding: 1.6em;
+  margin-top: 4em;
+}
+
+#index_link {
+  position: absolute;
+  top: 1em;
 }
