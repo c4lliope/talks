@@ -27,28 +27,29 @@ var ToDoList = React.createClass({
 
 var ToDoApp = React.createClass({
   getInitialState: function() {
-    return { items: [], inputText: '' };
-  },
-
-  onChange: function(e) {
-    this.setState({ inputText: e.target.value });
+    return { items: [] };
   },
 
   handleSubmit: function(e) {
     e.preventDefault();
+    var input = this.refs.input.getDOMNode();
+
     this.setState({
-      items: this.state.items.concat([this.state.inputText]),
-      inputText: '',
+      items: this.state.items.concat([input.value])
     });
+
+    input.value = "";
   },
 
   render: function() {
     return(
     <div>
       <h3>ToDo</h3>
+
       <ToDoList items={this.state.items} />
+
       <form onSubmit={this.handleSubmit}>
-        <input onChange={this.onChange} value={this.state.inputText} />
+        <input ref="input" />
         <button>{'Add #' + (this.state.items.length + 1)}</button>
       </form>
     </div>
