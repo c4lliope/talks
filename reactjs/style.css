@@ -35,6 +35,15 @@ a {
   color: #CC7A6F;
 }
 
+script[type="text/jsx"] {
+  margin-top: 4em;
+  display: block;
+  white-space: pre;
+  font-family: courier;
+  background-color: beige;
+  padding: 1.6em;
+}
+
 .headline {
   font-weight: bold;
 }

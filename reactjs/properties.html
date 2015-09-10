@@ -14,16 +14,16 @@
     <div id="example"></div>
 
     <script type="text/jsx">
-      var Greeting = React.createClass({
-        render: function() {
-          return <h1>Hello, {this.props.name}</h1>
-        }
-      });
+var Greeting = React.createClass({
+  render: function() {
+    return <h1>Hello {this.props.names.join(", ")}!</h1>
+  }
+});
 
-      React.render(
-        <Greeting name="thoughtbot"/>,
-        document.getElementById('example')
-      );
+React.render(
+  <Greeting names={["one", "two"]}/>,
+  document.getElementById('example')
+);
     </script>
 
     <div class="definitions">

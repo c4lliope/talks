@@ -29,9 +29,11 @@ var ToDoApp = React.createClass({
   getInitialState: function() {
     return { items: [], inputText: '' };
   },
+
   onChange: function(e) {
     this.setState({ inputText: e.target.value });
   },
+
   handleSubmit: function(e) {
     e.preventDefault();
     this.setState({
@@ -39,6 +41,7 @@ var ToDoApp = React.createClass({
       inputText: '',
     });
   },
+
   render: function() {
     return(
     <div>
